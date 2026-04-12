@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Gallery</title>
+
+<style>
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Gradient */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    text-align: center;
+}
+
+/* Header */
+h1 {
+    padding: 20px;
+}
+
+/* Gallery Grid */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Card */
+.card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.4s, box-shadow 0.4s;
+}
+
+/* Image */
+.card img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s;
+}
+
+/* Overlay */
+.overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+/* Hover Effects */
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.card:hover img {
+    transform: scale(1.1);
+}
+
+.card:hover .overlay {
+    opacity: 1;
+}
+</style>
+
+</head>
+<body>
+
+<h1>My Image Gallery</h1>
+
+<div class="gallery">
+    <div class="card">
+        <img src="https://picsum.photos/id/1015/400/300" alt="">
+        <div class="overlay">Mountain View</div>
+    </div>
+
+    <div class="card">
+        <img src="https://picsum.photos/id/1016/400/300" alt="">
+        <div class="overlay">Forest</div>
+    </div>
+
+    <div class="card">
+        <img src="https://picsum.photos/id/1025/400/300" alt="">
+        <div class="overlay">Dog</div>
+    </div>
+
+    <div class="card">
+        <img src="https://picsum.photos/id/1035/400/300" alt="">
+        <div class="overlay">River</div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html><html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>Responsive Animated Webpage</title><!-- Google Font --><link 
+href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&d
+isplay=swap" rel="stylesheet"><!-- Icons --><link rel="stylesheet" 
+href="https://cdnjs.cloudflare.com/ajax/libs/font-
+awesome/6.5.0/css/all.min.css"><style> 
+*{ 
+    margin:0; 
+    padding:0; 
+    box-sizing:border-box; 
+    font-family:'Poppins', sans-serif; 
+} 
+ 
+/* Day-Night Gradient Animation */ 
+body{ 
+    animation: skyChange 10s infinite alternate; 
+    color:white; 
+} 
+ 
+@keyframes skyChange{ 
+    0%{background: linear-gradient(to right, #ff9a9e, #fad0c4);} /* morning 
+*/ 
+    50%{background: linear-gradient(to right, #a1c4fd, #c2e9fb);} /* day */ 
+    100%{background: linear-gradient(to right, #141e30, #243b55);} /* night 
+*/ 
+} 
+ 
+header{ 
+    text-align:center;
+    padding:30px; 
+    font-size:2rem; 
+    font-weight:600; 
+} 
+ 
+.container{ 
+    column-count:3; 
+    column-gap:20px; 
+    padding:20px; 
+} 
+ 
+.card{ 
+    background: rgba(255,255,255,0.1); 
+    margin:10px 0; 
+    padding:20px; 
+    border-radius:15px; 
+    backdrop-filter: blur(10px); 
+    transition: transform 0.5s, box-shadow 0.5s; 
+} 
+ 
+.card:hover{ 
+    transform: scale(1.05) rotate(1deg); 
+    box-shadow:0 10px 20px rgba(0,0,0,0.3); 
+} 
+ 
+.card i{ 
+    font-size:30px; 
+    margin-bottom:10px; 
+    display:block; 
+} 
+ 
+/* Floating animation */ 
+@keyframes float{ 
+    0%{transform: translateY(0px);}
+    50%{transform: translateY(-10px);}  
+    100%{transform: translateY(0px);}  
+} 
+ 
+.card{ 
+    animation: float 4s ease-in-out infinite; 
+} 
+ 
+footer{ 
+    text-align:center; 
+    padding:20px; 
+    font-style:italic; 
+} 
+ 
+/* Responsive Design */ 
+@media(max-width:900px){ 
+    .container{ 
+        column-count:2; 
+    } 
+} 
+ 
+@media(max-width:600px){ 
+    .container{ 
+        column-count:1; 
+    } 
+} 
+ 
+</style></head><body><header> 
+     Responsive Animated Webpage 
+</header><div class="container"><div class="card"> 
+    <i class="fas fa-laptop-code"></i> 
+    <h3>Web Development</h3> 
+    <p>Learn modern responsive design using CSS3 features and 
+animations.</p>
+</div> 
+ 
+<div class="card"> 
+    <i class="fas fa-paint-brush"></i> 
+    <h3>Creative Design</h3> 
+    <p>Use gradients, fonts, and colors to create stunning UI designs.</p> 
+</div> 
+ 
+<div class="card"> 
+    <i class="fas fa-mobile-alt"></i> 
+    <h3>Mobile Friendly</h3> 
+    <p>Fully responsive layout using media queries for all devices.</p> 
+</div> 
+ 
+<div class="card"> 
+    <i class="fas fa-rocket"></i> 
+    <h3>Performance</h3> 
+    <p>Optimized animations and smooth transitions for better UX.</p> 
+</div> 
+ 
+<div class="card"> 
+    <i class="fas fa-globe"></i> 
+    <h3>Global Reach</h3> 
+    <p>Build websites that look great on all screens worldwide.</p> 
+</div> 
+ 
+</div><footer> 
+    "Design is intelligence made visible." ✨ 
+</footer></body> 
+</html>

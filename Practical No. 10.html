@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Iframe Example - Map & External Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+        .frame {
+            width: 50%;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        h2 {
+            text-align: center;
+            margin: 5px;
+            background: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Map Frame -->
+    <div class="frame">
+        <h2>Google Map (Mumbai)</h2>
+        <iframe src="https://www.google.com/maps?q=Mumbai&output=embed"></iframe>
+    </div>
+
+    <!-- External Page Frame -->
+    <div class="frame">
+        <h2>External Webpage</h2>
+        <iframe src="https://www.wikipedia.org"></iframe>
+    </div>
+
+</div>
+
+</body>
+</html>
